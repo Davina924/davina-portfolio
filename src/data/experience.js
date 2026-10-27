@@ -4,7 +4,7 @@ export const EDUCATION = {
   title: 'Information Systems',
   period: '2023 – 2027 (expected)',
   organization: 'Institut Teknologi Sepuluh Nopember',
-  stat: { value: 3.63, decimals: 2, label: '/ 4.00 GPA' },
+  stat: { value: 3.68, decimals: 2, label: '/ 4.00 GPA' },
   description:
     'Business Process Management, Enterprise System, Agile Project Management, Applied Technology and Digital Transformation, Software Design and Development.',
 };
