@@ -1,0 +1,9 @@
+.wrap {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+.process {
+  position: relative;
+  padding-left: var(--gutter-left);
+}

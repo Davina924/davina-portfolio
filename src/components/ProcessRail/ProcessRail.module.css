@@ -1,0 +1,68 @@
+.rail {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--gutter-left);
+  pointer-events: none;
+}
+
+.track,
+.fill {
+  position: absolute;
+  top: 0;
+  left: var(--rail-x);
+  width: 2px;
+}
+
+.track {
+  bottom: 0;
+  background: var(--color-line);
+}
+
+.fill {
+  height: 0;
+  background: var(--color-accent);
+}
+
+.token {
+  position: absolute;
+  top: -7px;
+  left: calc(var(--rail-x) - 6px);
+  z-index: 3;
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--color-paper);
+  border-radius: 50%;
+  background: var(--color-accent);
+  animation: spawn 0.6s 0.3s cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+
+.arrow {
+  position: absolute;
+  left: calc(var(--rail-x) - 5px);
+  z-index: 1;
+  width: 12px;
+  height: 8px;
+  color: var(--color-line);
+  transition: color 0.3s;
+}
+
+.arrow path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.done {
+  color: var(--color-accent);
+}
+
+@keyframes spawn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

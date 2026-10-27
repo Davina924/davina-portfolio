@@ -1,0 +1,129 @@
+.name {
+  margin-top: 22px;
+  font-size: clamp(64px, 13vw, 160px);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+}
+
+.line {
+  display: block;
+}
+
+.lastName {
+  color: var(--color-accent);
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.hintDot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+:global([data-theme='dark']) .hintDot {
+  background: transparent;
+  box-shadow: inset 2px -1px 0 0 var(--color-moon);
+}
+
+.role {
+  max-width: 30ch;
+  margin-top: 26px;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+}
+
+.intro {
+  max-width: 54ch;
+  margin-top: 22px;
+  color: var(--color-muted);
+}
+
+.intro strong {
+  color: var(--color-fg);
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 22px;
+  margin-top: 44px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--color-line);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shape {
+  display: inline-block;
+  border: 2px solid var(--color-muted);
+}
+
+.start {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.task {
+  width: 18px;
+  height: 13px;
+  border-radius: 4px;
+}
+
+.data {
+  width: 12px;
+  height: 15px;
+  border-radius: 1px;
+  clip-path: polygon(0 0, 70% 0, 100% 28%, 100% 100%, 0 100%);
+}
+
+.gateway {
+  width: 12px;
+  height: 12px;
+  margin-inline: 2px;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.end {
+  width: 15px;
+  height: 15px;
+  border-width: 4px;
+  border-radius: 50%;
+}
+
+.token {
+  width: 11px;
+  height: 11px;
+  border-color: var(--color-accent);
+  border-radius: 50%;
+  background: var(--color-accent);
+}

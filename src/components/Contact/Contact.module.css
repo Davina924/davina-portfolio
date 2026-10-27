@@ -1,0 +1,37 @@
+.contact {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+  padding: clamp(26px, 5vw, 48px);
+  border-radius: var(--radius-lg);
+  background: var(--color-contact-bg);
+  color: var(--color-contact-fg);
+}
+
+.title {
+  max-width: 16ch;
+  font-size: clamp(30px, 4.6vw, 48px);
+  font-weight: 800;
+}
+
+.text {
+  max-width: 52ch;
+  opacity: 0.8;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.email {
+  padding: 11px 14px;
+  border: 1px dashed color-mix(in srgb, var(--color-contact-fg) 45%, transparent);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  overflow-wrap: anywhere;
+  user-select: all;
+}

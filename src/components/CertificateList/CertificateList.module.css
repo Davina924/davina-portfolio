@@ -1,0 +1,99 @@
+.list {
+  display: grid;
+  gap: 14px;
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  column-gap: 12px;
+  row-gap: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-line);
+  cursor: zoom-in;
+}
+
+.item:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.item > *:not(.box) {
+  grid-column: 2;
+}
+
+.box {
+  grid-row: 1 / span 3;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border: 1.5px solid var(--color-line);
+  border-radius: var(--radius-sm);
+  background: var(--color-paper);
+  color: var(--color-on-accent);
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+}
+
+.check path {
+  stroke-width: 3.5;
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  transition: stroke-dashoffset 0.35s ease-out;
+}
+
+.checked .box {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+}
+
+.checked .check path {
+  stroke-dashoffset: 0;
+}
+
+/* Tick the boxes one after another */
+.checked .item:nth-child(1) .box,
+.checked .item:nth-child(1) .check path {
+  transition-delay: 0.3s;
+}
+
+.checked .item:nth-child(2) .box,
+.checked .item:nth-child(2) .check path {
+  transition-delay: 0.6s;
+}
+
+.checked .item:nth-child(3) .box,
+.checked .item:nth-child(3) .check path {
+  transition-delay: 0.9s;
+}
+
+.title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+}
+
+.button {
+  justify-self: start;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-accent);
+  font: 500 var(--text-xs) / 1.4 var(--font-mono);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}

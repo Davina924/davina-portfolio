@@ -1,0 +1,86 @@
+.gateway {
+  margin: 0;
+  padding: 18px 20px;
+  overflow-x: auto;
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius-md);
+}
+
+.gateway svg {
+  display: block;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
+}
+
+.base {
+  fill: none;
+  stroke: var(--color-line);
+  stroke-width: 2;
+}
+
+.yesPath {
+  fill: none;
+  stroke: var(--color-accent);
+  stroke-width: 2.5;
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+  transition: stroke-dashoffset 1s 0.2s ease-out;
+}
+
+.yesArrow {
+  fill: var(--color-accent);
+  opacity: 0;
+  transition: opacity 0.3s 1.1s;
+}
+
+.noPath {
+  fill: none;
+  stroke: var(--color-muted);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 5;
+  opacity: 0.6;
+}
+
+.noArrow {
+  fill: var(--color-muted);
+  opacity: 0.6;
+}
+
+.diamond {
+  fill: var(--color-paper);
+  stroke: var(--color-accent);
+  stroke-width: 2;
+}
+
+.cross {
+  fill: var(--color-accent);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.text {
+  fill: var(--color-fg);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.muted {
+  fill: var(--color-muted);
+}
+
+.caption {
+  fill: var(--color-muted);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+}
+
+.reached .yesPath {
+  stroke-dashoffset: 0;
+}
+
+.reached .yesArrow {
+  opacity: 1;
+}

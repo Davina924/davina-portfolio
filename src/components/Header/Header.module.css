@@ -1,0 +1,83 @@
+.header {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  margin-inline: -20px;
+  padding-inline: 20px;
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-bg-top);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 980px;
+  margin-inline: auto;
+  padding-block: 12px;
+}
+
+.logo {
+  display: flex;
+  text-decoration: none;
+}
+
+.letter {
+  fill: currentColor;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.link {
+  stroke: var(--color-accent);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: draw 0.9s 0.2s ease-out forwards;
+}
+
+.step {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.stepName {
+  display: inline-block;
+  color: var(--color-accent);
+  font-weight: 500;
+  animation: flip 0.35s ease-out;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes flip {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .step {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    stroke-dashoffset: 0;
+  }
+}

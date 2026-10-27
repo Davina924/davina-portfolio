@@ -1,0 +1,68 @@
+/*
+ * Design tokens.
+ * Light: clean white-to-sky-blue gradient that deepens toward the end of the page.
+ * Dark: black with neutral greys and a pale-blue accent.
+ * The theme is set on <html data-theme="light|dark"> by index.html and useTheme.
+ */
+
+:root {
+  /* Color */
+  --color-paper: #ffffff;
+  --color-bg-top: #f7fbff;
+  --color-bg-bottom: #d6e8ff;
+  --color-line: #cfddee;
+  --color-fg: #14213a;
+  --color-muted: #536379;
+  --color-accent: #1e4fd8;
+  --color-accent-soft: #dce8ff;
+  --color-on-accent: #ffffff;
+  --color-contact-bg: var(--color-fg);
+  --color-contact-fg: var(--color-bg-top);
+  --color-moon: #ffe7a3;
+  --shadow-sheet: 0 18px 40px -18px rgba(13, 38, 69, 0.45);
+
+  /* Typography */
+  --font-display: 'Bricolage Grotesque', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --text-xs: 13px;
+  --text-sm: 15px;
+  --text-md: 17px;
+  --text-lg: 21px;
+  --text-xl: 32px;
+
+  /* Shape */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Process rail */
+  --rail-x: 15px;
+  --gutter-left: 64px;
+
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --color-paper: #111111;
+  --color-bg-top: #000000;
+  --color-bg-bottom: #000000;
+  --color-line: #292929;
+  --color-fg: #f5f5f5;
+  --color-muted: #a3a3a3;
+  --color-accent: #9ccbff;
+  --color-accent-soft: #242424;
+  --color-on-accent: #000000;
+  --color-contact-bg: #111111;
+  --color-contact-fg: #f5f5f5;
+  --shadow-sheet: 0 18px 40px -18px rgba(0, 0, 0, 0.8);
+
+  color-scheme: dark;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --rail-x: 9px;
+    --gutter-left: 44px;
+  }
+}
