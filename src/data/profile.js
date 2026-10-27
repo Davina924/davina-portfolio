@@ -5,7 +5,7 @@ export const PROFILE = {
   role: 'Final-year Information Systems student working on ERP and process automation.',
   intro:
     'I got hooked on business processes while teaching Odoo. I like finding the manual steps in a workflow and making them simpler.',
-  availability: "Right now I'm looking for an internshipin Surabaya.",
+  availability: "Open for an internship.",
   email: 'davina.almeira1@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/davina-almeira',
 };
